@@ -1,13 +1,12 @@
+import ActionBar from "./action-bar";
+import MainNavigation from "./main-navigation";
+
 export const Home = () => {
   return (
     <div>
-      <div id="action-bar">
-        <div id="main-icon">Main Icon</div>
-        <div id="social-icons">Social Icons</div>
-        <div id="user-account">User Account</div>
-      </div>
+      <ActionBar />
 
-      <div id="website-links">Menu | Gallery | Story</div>
+      <MainNavigation />
 
       <div id="contact-phone">Phone</div>
     </div>
