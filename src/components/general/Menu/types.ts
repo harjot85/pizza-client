@@ -30,3 +30,8 @@ export type ItemPriceAndSize = {
   size: string;
   price: number;
 };
+
+export enum Category {
+  Pizza = 1,
+  Pasta = 2,
+}
