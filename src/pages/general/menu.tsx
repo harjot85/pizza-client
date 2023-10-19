@@ -1,7 +1,7 @@
-const MenuPage = () => {
-  return (
-    <div>MenuPage</div>
-  )
-}
+import Menu from "src/components/general/Menu/menu";
 
-export default MenuPage
+const MenuPage = () => {
+  return <Menu />;
+};
+
+export default MenuPage;
