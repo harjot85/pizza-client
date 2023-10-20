@@ -1,10 +1,8 @@
-import { LocalPizza } from "@mui/icons-material";
-
 const ActionBar = () => {
   return (
     <div id="action-bar">
       <div id="main-icon">
-        <LocalPizza fontSize="large" />
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>
       </div>
       <div id="social-icons">Social Icons</div>
       <div id="user-account">User Account</div>
