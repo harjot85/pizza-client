@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useCategorizedMenuGet } from "./hooks";
-import { CategorizedMenu, Category } from "./types";
+import { useEffect, useState } from 'react';
+import { useCategorizedMenuGet } from './hooks';
+import { CategorizedMenu, Category } from './types';
 
 const Menu = () => {
   const { isLoading, error, data: categorizedMenu } = useCategorizedMenuGet();
@@ -15,7 +15,7 @@ const Menu = () => {
   }, [categorizedMenu]);
 
   const joinArrayValues = (values: string[]) => {
-    return values.join(", ");
+    return values.join(', ');
   };
 
   if (error) return <div>Error</div>;
@@ -30,8 +30,8 @@ const Menu = () => {
       <div>
         {pizzaMenu?.menuItems.map((item) => {
           return (
-            <div>
-              <p key={item.itemId}>
+            <div key={item.itemId}>
+              <p>
                 <span>{item.name} - </span>
                 {joinArrayValues(
                   item.ingredients.map((ingredient) => ingredient.name)

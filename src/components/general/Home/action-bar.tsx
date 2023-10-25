@@ -8,24 +8,20 @@ const ActionBar = () => {
   return (
     <div
       id='action-bar'
-      className='container h-24 flex flex-row items-center max-w-full bg-amber-400'
+      className='h-24 flex flex-row items-center  bg-amber-400'
     >
-      <div id='main-icon' className='basis-3/4'>
+      <div id='main-icon' className='grow'>
         <img src={PizzaIcon} alt='pizza' className='h-16 pl-8' />
       </div>
 
-      <div id='social-icons' className='basis-1/12 flex'>
+      <div id='social-icons' className='flex'>
         <img src={PhoneIcon} alt='phone' className='h-8 pl-6' />
 
         <img src={EmailIcon} alt='email' className='h-8 pl-6' />
 
         <img src={FacebookIcon} alt='facebook' className='h-8 pl-6' />
-      </div>
 
-      <div id='user-account' className='basis-1/6'>
-        <div id='main-icon' className=''>
-          <img src={UserIcon} alt='user' className='h-8 pr-8 float-right' />
-        </div>
+        <img src={UserIcon} alt='user' className='h-8 px-6 ml-6' />
       </div>
     </div>
   );
