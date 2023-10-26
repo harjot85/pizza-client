@@ -22,34 +22,45 @@ const Menu = () => {
   if (isLoading) return <div>Loading...</div>;
 
   return (
-    <>
-      <div>Menu</div>
-      <hr />
-      <div>Filters</div>
-      <hr />
+    <div className='flex flex-col px-20 py-10'>
+      <div className='flex justify-start text-4xl'>Menu</div>
+      <hr className='border-1 border-amber-400' />
+      <div className='py-6'>
+        Filters
+        <button className='ml-4 px-4 py-1 border-2 border-amber-400 rounded-full bg-amber-400'>
+          Popular
+        </button>
+        <button className='ml-4 px-4 py-1 border-2 border-amber-400 rounded-full hover:bg-amber-400 '>
+          Meatless
+        </button>
+      </div>
+
       <div>
         {pizzaMenu?.menuItems.map((item) => {
           return (
-            <div key={item.itemId}>
-              <p>
-                <span>{item.name} - </span>
+            <div
+              key={item.itemId}
+              className=' bg-amber-400 rounded my-2 py-2 px-4'
+            >
+              <div className='text-2xl'>{item.name}</div>
+              <div className='text-lg py-2'>
                 {joinArrayValues(
                   item.ingredients.map((ingredient) => ingredient.name)
                 )}
-              </p>
-              <p>
+              </div>
+
+              <div className='flex flex-row mt-3'>
                 {item.itemPrices.map((item) => (
-                  <span>
-                    {item.size}: ${item.price}
-                  </span>
+                  <div className='basis-1/6'>
+                    <span className='font-medium'>{item.size}:</span> <span>${item.price}</span>
+                  </div>
                 ))}
-              </p>
-              <hr />
+              </div>
             </div>
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 
